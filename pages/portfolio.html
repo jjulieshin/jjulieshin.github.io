@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+
+    <!--google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,700;1,300&family=Lato:ital,wght@0,300;0,400;1,400&family=Noto+Sans:ital,wght@0,300;0,600;1,300;1,600&family=Source+Serif+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- css link -->
+    <!-- <link rel="stylesheet" href="../css/portfolio.css"> -->
+    <link rel="stylesheet" href="../css/mainminify.css">
+    <link rel="stylesheet" href="../css/resetminify.css">
+
+
+</head>
+
+<body>
+    <header class="navLogo">
+        <a href="../index.html" class="hLogo">
+            <img src="/images/logo.png" class="logo" alt="logo"> <a href="index.html"></a>
+        </a>
+
+        <ul class="menu">
+            <li><a class="menuItem" href="../index.html">Home</a></li>
+            <li><a class="menuItem" href="profile.html">Profile</a></li>
+            <li><a class="menuItem" href="./portfolio.html">Project</a></li>
+
+            <li><a class="menuItem" href="./contact.html">Contact</a></li>
+        </ul>
+        <button class="hamburger">
+            <!-- material icons https://material.io/resources/icons/ -->
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+        </button>
+    </header>
+    <!-- motionLetters ----------------------------------->
+    <h1 class="pFolio">JJ 's Portfolio & Project</h1>
+
+    <section class="carousel">
+        <button class="carouselBtn leftBtn isHidden">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </button>
+
+        <!-- div.carouselConatiner>ul.carouselItems>li*6.carouselSlide>h2{Headline $}+img[src=images/0$.jpg][alt='image description']+p>lorem -->
+        <div class="carouselContainer">
+            <ul class="carouselItems">
+                <li class="carouselSlide currentSlide">
+                    <h2>Bootstrap responsive page</h2>
+                    <img src="../images/01.png" alt="Bootstrap">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, doloremque aut. Maxime modi
+                        minima pariatur dignissimos eius distinctio vero veniam quaerat debitis libero. Labore cum
+                        deleniti excepturi nihil obcaecati fugit?</p>
+                </li>
+                <li class="carouselSlide">
+                    <h2>CSS Variable</h2>
+                    <img src="../images/02.jpg" alt="css variable">
+                    <p>Quasi ducimus, laboriosam autem eum commodi porro eaque cupiditate voluptatum, eius illo ex
+                        corporis! </p>
+                </li>
+                <li class="carouselSlide">
+                    <h2>JavaScript RPS game making</h2>
+                    <img src="../images/03.png" alt="rps">
+                    <p>Veritatis exercitationem reprehenderit atque ducimus debitis, accusantium facere ullam placeat
+                        corrupti quam fuga. Reiciendis quia temporibus perspiciatis officiis quibusdam doloremque earum
+                        mollitia beatae architecto nobis. Asperiores sed accusamus est placeat?</p>
+                </li>
+                <li class="carouselSlide">
+                    <h2>Form</h2>
+                    <img src="../images/04.png" alt="form-coffee">
+                    <p>Sequi necessitatibus laborum perspiciatis, cumque consequatur quas culpa, voluptatibus at
+                        repellendus recusandae, veniam omnis dolorem facilis praesentium. Excepturi facere asperiores
+                        temporibus quis rem eius! Fuga rem culpa aperiam ab ducimus.</p>
+                </li>
+                <li class="carouselSlide">
+                    <h2>Grid Layout</h2>
+                    <img src="../images/05.png" alt="grid">
+                    <p>Dignissimos, inventore omnis dolorem rem magnam reiciendis magni explicabo quas aliquam
+                        doloremque hic voluptas temporibus excepturi at modi natus non placeat enim quod? Laborum, in
+                        fugiat voluptate consequatur rerum est?</p>
+                </li>
+                <li class="carouselSlide">
+                    <h2>Js Background Clip Mask effect</h2>
+                    <img src="../images/06.png" alt="clip">
+                    <p>Autem rerum porro consequatur ab voluptatum, et quod ullam nemo id placeat laborum quo incidunt
+                        error voluptatibus praesentium, cumque nulla? Eum natus ad consequatur laborum omnis illum a
+                        eaque voluptas.</p>
+                </li>
+            </ul>
+        </div>
+        <button class="carouselBtn rightBtn">
+            <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+
+        <nav class="carouselNav">
+            <button class="carouselIndicator currentSlide"></button>
+            <button class="carouselIndicator"></button>
+            <button class="carouselIndicator"></button>
+            <button class="carouselIndicator"></button>
+            <button class="carouselIndicator"></button>
+            <button class="carouselIndicator"></button>
+        </nav>
+    </section>
+    <!-- footer------------------------------------------ -->
+    <footer>
+         <p>Copyright &copy; 2023 | JJ Workshop.<br></p>
+            <ul class="social-media">
+         
+         
+            <li class="one"><i class="fa-brands fa-github"><a href="http://www.github.com"></a></i></li>
+            <li class="two"><i class="fa-brands fa-instagram"><a href="http://www.instagram.com"></a></i></li>
+            <li class="three"><i class="fa-brands fa-facebook"><a href="http://www.facebook.com"> d</a></i></li>
+            <li class="four"><i class="fa-brands fa-youtube"><a href="http://www.youtube.com"></a></i></li>
+           </ul>
+    </footer> 
+<script src="../scripts/01.js"></script>
+</body>
+
+</html>

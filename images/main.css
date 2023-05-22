@@ -1,0 +1,781 @@
+/* global variables */
+:root {
+    /* typography */
+    --primary-font: 'Noto Sans', 'Source Serif Pro';
+    --headline-font: 'Noto Sans';
+
+    --fw-l: 300;
+    --fw-m: 500;
+    --fw-b: 700;
+    --fs-base: 1rem;
+    /* responsive */
+    --grid-col: 1fr;
+    /* colors */
+    /* new design system 0322 */
+    --bg: var(--neutral-lt-color);
+    --heading: (--secondary-color);
+    --heading-bg: var(--primary-color);
+    --text-color: var(--neutral-mid-color);
+    --btn-bg: var(--neutral-mid-color);
+    --btn-text: var(--neutral-lt-color);
+    --btn-hover-bg: var(--neutral-mid-color):
+    --btn-hover-text: var(--accent-color);
+
+    --primary-color: rgb(34, 34, 34);
+    --secondary-color: #fafafa;
+    --tertiary-color: hsl(0, 4%, 77%);
+    --neutral-mid-color: rgb(189, 179, 179);
+    --accent-color: #FC6211;
+    --neutral-lt-color:#f2dede;
+
+
+
+    /* helper */
+    --spacer: 1.5rem;
+    --spacer-dbl: calc(var(--spacer) * 2);
+    --border-radius: 6px;
+    --shadow: 0 0 6px rgba(0, 0, 0, .3);
+
+}
+
+/* ================================================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body main {
+  margin: 0 auto;
+  padding: 0 ;
+}
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+ main{
+     margin-bottom: 20px;
+ }
+.hLogo {
+    background-color: var(--primary-color);
+    /* position: sticky; */
+    display: block;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+}
+
+.hLogo img{
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(2px 2px 1px #e5e5fe);
+}
+
+/* navBar */
+.menuItem {
+    display: block;
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 25px 20px;
+    border-bottom: solid .1px var(--secondary-color);
+}
+
+ul li a.menuItem:hover {
+    text-decoration: none;
+    background-color: #eae7e7;
+    color: var(--accent-color);
+    text-shadow:hsl(0, 4%, 77%);
+    font-weight: var(--fw-m);
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+
+.closeIcon {
+    display: none;
+}
+
+.menu {
+    font-family: var(--headline-font);
+    background-color: var(--primary-color);
+    position: fixed;
+    transform: translateY(-100%);
+    /* 메뉴를 Y 축 기준으로  사라지게 만드는 역할 */
+    /* transition: transform 0.2s; */
+    top: -10px;
+    left: 0;
+    right: 0;
+    color: var(--secondary-color);
+    list-style: none;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+ul.menu.showMenu {
+    padding-top: 0;
+    position: relative;
+}
+
+/* background image and slide H1 */
+section.hSection {
+    /* background: url(../images/bgfire_sm.jpg) ; */
+    background: url(../images/bgfire_LG.jpg) fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    justify-content: center;
+}
+
+section.hSection h1 {
+    font-family: var(--headline-font);
+    position: relative;
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-size: 4em;
+    padding: 75px 40px;
+    text-align: right;
+    width: 400px;
+    line-height: 1.5;
+    animation: slide 5s;
+    /* text-shadow: 3px 2px 2px #646060; */
+    ;
+    text-shadow: 3px 2px 2px rgba(81,67,21,0.8);
+
+/* css animation effects (keyframe using) */
+}
+
+@keyframes slide {
+    from {
+      left: -500px;
+      opacity: 0;
+    }
+  
+    to {
+      left: 900px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide_back {
+    from {
+      left: 900px;
+      opacity: 1;
+  
+    }
+  
+    to {
+      left: 600px;
+      opacity: 0;
+    }
+  
+  }
+  
+
+/* homeaside. grid images
+=========================================== */
+
+ul.gridMenu {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    align-items: center;
+    /* height: 400px; */
+}
+
+div.imgBox {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    width: 440px;
+    height: auto;
+    line-height: var(--spacer);
+    box-shadow: var(--shadow);
+}
+
+.faceProfile {
+    display: flex;
+    flex-direction: row
+}
+
+.faceProfile img {
+    min-width: 120px;
+    max-width: 150px;
+    height:auto;
+    border: solid 1px var(--tertiary-color);
+    box-shadow:var(--shadow) ;
+    border-radius: 50%;
+
+
+}
+
+.faceProfile p {
+    font-weight: var(--fw-m);
+    font-size: 1em;;
+    text-align: center;
+    margin-top: 25px;
+    line-height: var(--spacer);
+   
+} 
+.faceProfile a{
+    text-decoration:none;
+    padding: 6px;
+    background-color: var(--neutral-md-color);
+    color: red;
+    font-weight: var(--fw-b);
+}
+.faceProfile button{
+    border: none;
+   
+}
+
+h2.hslideTitle {
+    font-family: var(--headline-font);
+    font-weight: var(--fw-b);
+    font-size: 1.3em;
+    text-align: center; 
+   color: var(--primary-color);
+    margin: 10px 0;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+
+/* slideshow==================== */
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1.pFolio {
+    color: var(--neutral-mid-color);
+    text-align: center;
+    padding-top: 1rem;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    text-shadow: 1.5px 1.5px var(--primary-color);
+    border-bottom: solid 1px var(--neutral-md-color)
+}
+section.carousel {
+    width: 80%;
+    max-width: 100%;
+    height: 400px;
+    ;
+    position: relative;
+    margin:0 auto;
+    position: relative;
+}
+
+
+div.carouselContainer {
+    background-color: var(--secondary-color);
+    height: 150%;
+    position: relative;
+    overflow: hidden;
+    /* box-shadow: 0 .025em 0 .025em rgba(195, 189, 189, 0.75) */
+    box-shadow: var(--shadow);
+
+}
+
+.carouselItems {
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+    transition: transform .25s ease-in;
+  ; 
+}
+
+.carouselSlide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+   
+
+
+}
+
+.carouselSlide h2 {
+    padding-bottom: 10px;
+    line-height: var(--spacer);
+}
+
+.carouselBtn {
+    background-color: transparent;
+    border: none;
+    color: var(---tertiary-color);
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.carouselBtn.leftBtn {
+    left: -40px;
+}
+
+.carouselBtn.rightBtn {
+    right: -40px;
+}
+
+nav.carouselNav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom:0;
+}
+
+.carouselIndicator {
+    background-color:  var(--tertiary-color);
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.carouselIndicator.currentSlide {
+    background-color: var(--primary-color);
+    align-items: center;
+}
+
+.isHidden {
+    display: none;
+}
+
+/* slideshow end ======================*/
+/* footer =================================*/
+
+footer {
+    position: fixed;
+    width: 100%;
+    left:0;
+    bottom: 0;
+    padding: 30px 0;
+    background: var(--primary-color);
+    text-align: center;
+    color: var(--secondary-color);
+}
+/* flex 로  삼단 레이아웃 잡을 때 푸터에 높이를 지정하지 않는다.  */
+
+/* footer::before {
+    float: none;
+    clear: both;
+} */
+
+footer p {
+    padding-top: 10px;
+    font-family: var(--primary-font);;
+    font-weight: 300;
+}
+
+ul.social-media {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-top: 10px;
+}
+ul.social-media li{
+    font-weight: var(--fw-b);
+    padding-right: 20px;;
+}
+/* body footer .social-media .three a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    text-indent: -9999px;
+} */
+
+
+
+
+/* media query 600-900+++++++++++++++++++++++++++++++++++++ */
+@media(min-width: 600px) and (max-width: 900px) {
+    /* background image and slide H1 */
+    section.hSection {
+        /* background: url(../images/bgfire_sm.jpg) ; */
+        background: url(../images/bgfire_LG.jpg) relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto;
+        justify-content: center;
+    
+    }
+
+    section.hSection h1 {
+        font-family: var(--headline-font);
+        /* position: relative; */
+        color: var(--secondary-color);
+        font-weight: 800;
+        font-size: 4em;
+        padding: 75px 40px;
+        text-align: right;
+        width: 400px;
+        line-height: 1.5;
+        text-shadow: 3px 2px 2px rgba(81,67,21,0.8);
+    }
+    ul.gridMenu {
+        
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        padding-bottom: 20px;
+    }
+
+    footer {
+        float: none;
+    }
+}
+
+@media(min-width: 900px) {
+
+
+    section.hSection {
+        /* background: url(../images/bgfire_sm.jpg) ; */
+        background: url(../images/bgfire_LG.jpg) relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+    }
+    section.hSection h1 {
+        font-weight: 900;
+        font-size: 4em;
+    }
+    ul.gridMenu {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 400px);
+    }
+    .faceProfile {
+        margin:5px;
+        padding-left: 5px;
+        display: flex;
+        flex-direction:row;
+    }
+    .faceProfile img{
+        margin:0;
+        padding:0;
+    }
+    header.navLogo {
+        display: block;
+        /* z-index: 100; */
+        background-color: var(--primary-color);
+    }
+
+    img.logo {
+        color: var(--secondary-color);
+        text-shadow: 2px 2px 4px #ece4e4;
+
+        z-index: 1;
+    }
+
+    ul.menu.showMenu {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        transform: translateY(0);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .menuItem {
+        /* text-decoration: none; */
+        border: none;
+    }
+
+    button.hamburger {
+        display: none;
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .menu {
+        background-color: var(--primary-color);
+        /* z-index: -1; */
+        position: absolute;
+        top: 0;
+        transform: translateY(0);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+    }
+
+
+}
+/* profile page start========================================== */
+
+section.proFilesection {
+    background: url(../images/aboutMe_lg.jpg) fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+    justify-content: center;
+}
+section.proFilesection h1 {
+    font-family: var(--headline-font);
+    position: relative;
+    color: var(--neutral-lt-color);
+    font-weight: var(--fw-m);
+    font-size: 3em;
+    padding: 75px 40px;
+    text-align: right;
+    width: 400px;
+    line-height: 1.1;
+    animation: slide 5s;
+    /* text-shadow: 3px 2px 2px #646060; */
+    ;
+    text-shadow: 3px 2px 2px rgba(124, 124, 122, 0.8);
+}
+/* css animation effects (keyframe using) */
+.profileItem {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    font-size: var(--primary-font);
+    font-weight: bold;
+}
+
+.containerPortfolio {
+    display: grid;
+}
+
+/* profile page end========================================== */
+/* ==========contact start============================== */
+
+
+#contact fieldset {
+    position: absolute;
+    top: 90px;
+    margin: 2em;
+    padding: 1em 2em;
+    border: solid 1px var(--tertiary-color);
+    border-radius: 6px;
+    max-width: 550px;
+    background-color: var(--secondary-color);
+}
+
+#contact legend {
+    font-size: 1.5em;
+    padding: 0 .25em;
+    color: #999;
+    position: relative;
+    top: -11px;
+    left: -4px;
+    background-color: var(--secondary-color);
+}
+
+#contact label {
+    display: block;
+    margin-top: 1em;
+}
+
+#contact .checks label,
+#contact .radioBtns label {
+    margin-top: 0;
+}
+
+#contact input,
+#contact textarea {
+    padding: .5em;
+    border: solid 1px #999;
+    border-radius: 4px;
+}
+
+#contact textarea {
+    min-height: 8em;
+    min-width: 100%;
+}
+
+#contact input[type="email"],
+#contact input[type="text"] {
+    width: 15em;
+}
+
+#contact .radioBtns p {
+    margin-top: 1em;
+}
+
+#contact input[type="checkbox"]+label {
+    display: inline-block;
+    margin-top: 0;
+}
+
+#contact input[type="submit"] {
+    padding: .8em 1em;
+    border-radius: 6px;
+    background-color: #3ca3ac;
+    color: var(--secondary-color);
+    border: none;
+    font-size: .9em;
+    margin-top: 1em;
+}
+
+input:focus,
+textarea:focus {
+    outline: solid 2px #3ca3ac;
+    border: solid 2px #3ca3ac;
+    box-shadow: 0 0 4px #3caeac;
+}
+
+#contact .checks {
+    margin-top: .25em;
+}
+
+#contact .checks label {
+    display: inline-block;
+}
+
+.checks span:before {
+    display: inline-block;
+    font-family: "font Awesome 6 Free";
+    font-size: 1.4em;
+    content: "\f0c8";
+    /* font awesome  에 있는 유니코드 */
+    color: #3ca3ac;
+    vertical-align: middle;
+    ;
+    margin-top: -3px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    margin-left: -1px;
+    opacity: 0;
+
+}
+
+input[type="checkbox"]:checked~span::before {
+    content: "\f14a";
+}
+
+#contact .radioBtns label {
+    display: inline-block;
+    margin-right: .5em;
+    padding-top: .75em;
+}
+
+.radioBtns span:before {
+    display: inline-block;
+    font-family: "font Awesome 6 Free";
+    font-size: 1.5em;
+    content: "\f111";
+    content: "\f111";
+    content: "\f111";
+    content: "\f111";
+    content: "\f111";
+    /* font awesome  에 있는 유니코드 */
+    color: #3ca3ac;
+    vertical-align: middle;
+    ;
+    margin-top: -3px;
+}
+
+input[type="radio"] {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: -1px;
+    margin-left: 2px;
+    opacity: 0;
+
+}
+
+input[type="radio"]:checked~span::before {
+    content: "\f192";
+}
+
+label.toggleSwitch {
+    cursor: pointer;
+    margin: 1.25em 0 1em;
+    display: flex;
+    align-items: center;
+}
+
+.checkboxValue {
+    background-color: #ddd;
+    border: solid .1em #3ca3ac;
+    border-radius: .75em;
+    box-shadow: inset 0 .625em 0 .625em #3ca3ca52;
+    display: inline-block;
+    height: 1.2em;
+    margin: 0 .5em 0 0;
+    position: relative;
+    width: 2.4em;
+    vertical-align: -.3em;
+    transition: all 120ms;
+}
+
+.checkboxValue:before {
+    background-color: #fff;
+    border: solid .1em;
+    border-color: inherit;
+    border-radius: 50%;
+    box-shadow: 0 .025em 0 .025em rgba(0, 0, 0, .75);
+    content: "";
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    position: absolute;
+    left: 16%;
+    top: 0;
+    margin-top: -.125em;
+    margin-left: -.5em;
+    transition: all 120ms ease-in;
+}
+
+.toggleSwitch input[type="checkbox"]:checked~span::before {
+    content: "";
+}
+
+input:checked+.checkboxValue {
+    background-color: #89cbd1;
+    border-color: #169a9a;
+
+}
+
+input:checked+.checkboxValue::before {
+    left: 80%;
+}
+
+/* ==========contact end=========================== */
